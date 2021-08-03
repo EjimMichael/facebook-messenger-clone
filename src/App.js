@@ -5,7 +5,9 @@ import Message from './Message';
 
 function App() {
   const [input, setInput] = useState('');
-  const [messages, setMessages] = useState(['hello', 'hi', 'whats up'])
+  const [messages, setMessages] = useState([
+    {username: 'Michael', text: 'hey guys'}, 
+    {username: 'Ejim', text: 'whats up'}]);
   const [username, setUsername] = useState('');
 
   useEffect(() => {
@@ -14,12 +16,12 @@ function App() {
 
 const sendMessage = (event) => {
   event.preventDefault();
-  setMessages([...messages, input]);
+  setMessages([...messages, { username: username, text: input}]);
   setInput('');
 }
   return (
     <div className="App">
-      <h1>Hello clever programming</h1>
+      <h1>Hello Team codersHub</h1>
       <h2>Welcome {username}</h2>
 
       <form>
@@ -33,7 +35,7 @@ const sendMessage = (event) => {
      {/* messages themselves */}
      {
        messages.map(message => (
-         <Message text={message} />
+         <Message username={username} message={message} />
        ))
      }
 
