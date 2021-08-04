@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button,FormControl, InputLabel, Input } from '@material-ui/core';
+import { FormControl, Input } from '@material-ui/core';
 import './App.css';
 import Message from './Message';
 import db from './firebase';
@@ -38,7 +38,7 @@ const sendMessage = (event) => {
 }
   return (
     <div className="App">
-      <img src="https://facebookbrand.com/wp-content/uploads/2020/10/Logo_Messenger_NewBlurple-399x399-1.png?w=100&h=100" />
+      <img src="https://facebookbrand.com/wp-content/uploads/2020/10/Logo_Messenger_NewBlurple-399x399-1.png?w=100&h=100" alt="Messenger Logo"/>
       <h1>Hello Team codersHub</h1>
       <h2>Welcome {username}</h2>
 
