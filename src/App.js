@@ -36,10 +36,11 @@ const sendMessage = (event) => {
 }
   return (
     <div className="App">
-      <h1>Hello Team coders</h1>
+      <img src="https://facebookbrand.com/wp-content/uploads/2020/10/Logo_Messenger_NewBlurple-399x399-1.png?w=100&h=100" />
+      <h1>Hello Team codersHub</h1>
       <h2>Welcome {username}</h2>
 
-      <form>
+      <form className="app__form">
       <FormControl>
         <InputLabel>Enter a message</InputLabel>
         <Input value={input} onChange={event => setInput(event.target.value)}/>
